@@ -1,9 +1,15 @@
 import './App.css'
 
+import Header from './components/header';
+import Body from './components/body';
+import Footer from './components/footer';
+
 function App() {
   return (
     <>
-      <h1>eCommerce Mock Site</h1>
+      <Header />
+      <Body />
+      <Footer />
     </>
   )
 }
