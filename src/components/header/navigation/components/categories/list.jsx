@@ -1,25 +1,46 @@
+import { useState, useEffect } from 'react';
 
-function CategoryList({ categories }) {
+import CategoryItem from './item.jsx';
+
+function CategoryList() {
+  const [categories, setCategories] = useState([]);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    fetch('https://dummyjson.com/products').then(async (result) => {
+      const data = await result.json();
+      let obj = {};
+      data['products'].forEach(product => {
+        let cat = product['category'];
+
+        if ( cat in obj ) {
+          obj[cat]['total'] += 1
+        }
+        else {
+          obj[cat] = {
+            name: cat,
+            thumbnail: product['thumbnail'],
+            total: 1
+          }
+        }
+      });
+
+      setCategories(Object.values(obj));
+    }).catch(e => {
+      setError(e);
+    })
+  },[]);
+
   return (
-    <ul className='grid gap-8 grid-cols-[max-content_max-content]'>
+    (categories && !error) ?
+      <ul className='grid gap-8 grid-cols-[max-content_max-content]'>
       {
-        categories.map((category,i) => {
-          let name = category['name'];
-
-          return (
-            <li key={ i }>
-              <a href='#' className='p-1 flex items-center'>
-                <img className='w-16' src={ category['thumbnail'] } alt={ category['name'] + ' image'} />
-                <div>
-                  <p>{ name[0].toUpperCase().concat(name.slice(1)) }</p>
-                  <p>{ category['total'] } Items Available</p>
-                </div>
-              </a>
-            </li>
-          )
-        })
+        categories.map((category,i) => 
+          <CategoryItem key={i} category={category} />
+        )
       }
-    </ul>
+      </ul>
+      : <p>Trouble loading categories</p>
   )
 }
 
