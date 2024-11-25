@@ -1,9 +1,14 @@
-import './body.css';
+import { useContext } from 'react';
+
+import { PageSettingsContext } from '../../context';
 
 function Body() {
+  const PageSettings = useContext(PageSettingsContext);
+
   return (
-    <main>
-      Main
+    <main className='grow'>
+      <p>Language: { PageSettings.language }</p>
+      <p>Location: { PageSettings.location }</p>
     </main>
   );
 }

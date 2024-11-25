@@ -1,3 +1,11 @@
 .banner {
-  
+  a.tel::before {
+    content: '\f095';
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    display: inline-block;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    padding-right: 8px;
+  }
 }
