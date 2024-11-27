@@ -20,6 +20,9 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+section {
+  margin-bottom: 80px;
+}
 .select-wrapper {
   select {
     -moz-appearance: none;
