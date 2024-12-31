@@ -8,17 +8,13 @@ function BrandList() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://jsonblob.com/api/jsonBlob/1311109444679163904',{
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json'
-      }
-    }).then(res => 
-      res.json()
-    ).then(result => {
-      setLoading(false);
-      setBrands(result);
-    }).catch(e => setError(true));
+    import('./data.json').then(mod => 
+      mod.default
+    ).then(brands => {
+      setBrands(brands);
+    }).catch(e => {
+      setError(true);
+    }).finally(() => setLoading(false));
   },[]);
 
   return (

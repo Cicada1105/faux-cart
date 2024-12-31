@@ -3,6 +3,7 @@ import { useContext } from 'react';
 import { PageSettingsContext } from '../../context';
 
 import Brands from './sections/brands';
+import Discounts from './sections/discounts';
 
 function Body() {
   const PageSettings = useContext(PageSettingsContext);
@@ -12,6 +13,7 @@ function Body() {
       <p>Language: { PageSettings.language }</p>
       <p>Location: { PageSettings.location }</p>
       <Brands />
+      <Discounts />
     </main>
   );
 }

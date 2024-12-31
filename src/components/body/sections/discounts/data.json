@@ -1,0 +1,50 @@
+[
+  {
+    "discount": 100,
+    "description": "Explore Our Furniture & Home Furnishing Range",
+    "image": {
+      "url": "https://www.dropbox.com/scl/fi/gxzoso8jztrho283ea36x/yellow-room.jpg?rlkey=ekeu8lcvlbyaoapz787ato59k&st=2cvnjp2q&dl=1",
+      "aspectRatio": 0.7425
+    },
+    "color": {
+      "text": "43, 80%, 44%",
+      "bg": "43, 80%, 94%"
+    }
+  },
+  {
+    "discount": 29,
+    "description": "Explore Our Furniture & Home Furnishing Range",
+    "image": {
+      "url": "https://www.dropbox.com/scl/fi/2etyzygl9uxqt23qxtg8s/red-room.jpg?rlkey=fc4dj332kupgm45iuohnexywi&st=fv1niv17&dl=1",
+      "aspectRatio": 1.36
+    },
+    "color": {
+      "text": "0, 66%, 35%",
+      "bg": "0, 66%, 85%"
+    }
+  },
+  {
+    "discount": 67,
+    "description": "Explore Our Furniture & Home Furnishing Range",
+    "image": {
+      "url": "https://www.dropbox.com/scl/fi/2394ap83xnwbeorr4i77p/beige-room.jpg?rlkey=7nidmt3eg36i339fpvwpwjr0e&st=sznmep3n&dl=1",
+      "aspectRatio": 1.59
+    },
+    "color": {
+      "text": "26, 42%, 41%",
+      "bg": "26, 42%, 91%"
+    }
+  },
+  {
+    "discount": 59,
+    "description": "Explore Our Furniture & Home Furnishing Range",
+    "image": {
+      "url": "https://www.dropbox.com/scl/fi/ayt9clsh0vy8aqlmllu8e/green-chalkboard.jpg?rlkey=u8qq4rtvsgew6em4xegi7p1b1&st=pp162kov&dl=1",
+      "aspectRatio": 1.36
+    },
+    "color": {
+      "text": "160, 100%, 12%",
+      "bg": "160, 100%, 62%"
+    }
+  }
+]
