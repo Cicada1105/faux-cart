@@ -1,0 +1,23 @@
+#weeklyProducts {
+  -moz-scrollbar-track: rgb(212,211,211);
+  scrollbar-color: rgb(39,36,35) rgb(212,211,211);
+  scrollbar-width: thin;
+  scroll-snap-type: x mandatory;
+
+  & li {
+    scroll-snap-align: start;
+  }
+  &::-webkit-scrollbar {
+    height: 5rem;
+    min-height: 5rem;
+  }
+  &::-webkit-scrollbar-track {
+    background-color: rgb(212,211,211);
+    height: 5rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: rgb(39,36,35);
+    height: 5rem;
+    border-radius: 0;
+  }
+}

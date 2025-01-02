@@ -4,6 +4,7 @@ import { PageSettingsContext } from '../../context';
 
 import Brands from './sections/brands';
 import Discounts from './sections/discounts';
+import WeeklyProducts from './sections/weekly-products';
 
 function Body() {
   const PageSettings = useContext(PageSettingsContext);
@@ -14,6 +15,7 @@ function Body() {
       <p>Location: { PageSettings.location }</p>
       <Brands />
       <Discounts />
+      <WeeklyProducts />
     </main>
   );
 }
