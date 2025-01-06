@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 
 import ProductItem from '@components/product-item';
 
-import './style.css';
-
 function ProductList() {
   const [items,setItems] = useState([]);
   const [loading,setLoading] = useState(true);
@@ -43,7 +41,7 @@ function ProductList() {
       <p>Loading...</p>
     :
       (!error && items.length) ?
-        <div id='mostSelling' className='overflow-x-scroll pb-8'>
+        <div className='hor-scrollbar overflow-x-scroll pb-8'>
           <ul className='flex gap-x-6 w-max'>
             {
               items.map((item,i) => {
