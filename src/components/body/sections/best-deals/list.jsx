@@ -14,21 +14,18 @@ function ProductList() {
       result.json()
     ).then(result => {
       const TOTAL_PRODUCTS = 5;
-      let bestDeals = [];
-      const currentProducts = result.products;
+      let currentProducts = result.products;
       
-      bestDeals = currentProducts.slice(0,5);
-      console.log(bestDeals);
-      /*let currIndex = 5;
-      do {
-        if ( currentProducts[currIndex].rating >= 4 ) {
-          bestDeals.push(currentProducts[currIndex]);
-        }
+      // Order products from biggest discount to least
+      currentProducts.sort((prod1, prod2) =>
+        prod1.discountPercentage > prod2.discountPercentage ? -1 : 1
+      );
 
-        currIndex++;
-      } while( (bestDeals.length < TOTAL_PRODUCTS) && (currIndex <= currentProducts.length));*/
+      // Remove everything after TOTAL_PRODUCTS 
+      //  (ie. everything after product #5)
+      currentProducts.splice(TOTAL_PRODUCTS);
 
-      setItems(bestDeals);
+      setItems(currentProducts);
     }).catch(e => {
       console.log(e);
       setError(true);

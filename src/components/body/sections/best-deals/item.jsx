@@ -1,6 +1,6 @@
 import Rating from '@components/rating';
 
-function ProductItem({ title, price, description, rating, reviews, thumbnail }) {
+function ProductItem({ title, price, discountPercentage, description, rating, reviews, thumbnail }) {
   return (
     <li className='md:w-[33.333vw] inline-block rounded-xl text-left'>
       <div className='bg-[#f5f6f6] rounded-xl relative aspect-square'>
@@ -14,6 +14,7 @@ function ProductItem({ title, price, description, rating, reviews, thumbnail }) 
             <sup>$</sup>{ price }<sup>.00</sup>
           </p>
         </hgroup>
+        <p className='font-bold text-[red] text-sm uppercase'>{ discountPercentage }% off!</p>
         <p className='font-medium text-sm'>{ description }</p>
         <Rating rating={rating} />
         <button className='hover:bg-green hover:text-white px-5 py-2 border-solid border-green border-[1px] font-medium rounded-3xl transition duration-500'>Add to Cart</button>
