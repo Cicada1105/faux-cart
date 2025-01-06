@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import ProductItem from './item.jsx';
+import ProductItem from '@components/product-item';
 
 import './style.css';
 

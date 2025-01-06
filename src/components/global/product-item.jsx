@@ -1,6 +1,6 @@
 import Rating from '@components/rating';
 
-function ProductItem({ title, price, description, rating, reviews, thumbnail }) {
+function ProductItem({ title, price, discountPercentage = null, description, rating, reviews, thumbnail }) {
   return (
     <li className='md:w-[33.333vw] inline-block rounded-xl text-left'>
       <div className='bg-[#f5f6f6] rounded-xl relative aspect-square'>
@@ -14,6 +14,10 @@ function ProductItem({ title, price, description, rating, reviews, thumbnail }) 
             <sup>$</sup>{ price }<sup>.00</sup>
           </p>
         </hgroup>
+        {
+          discountPercentage &&
+          <p className='font-bold text-[red] text-sm uppercase'>{ discountPercentage }% off!</p>
+        }
         <p className='font-medium text-sm'>{ description }</p>
         <div className='flex gap-x-2'>
           <Rating rating={rating} />

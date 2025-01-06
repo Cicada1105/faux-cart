@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import ProductItem from './item.jsx';
+import ProductItem from '@components/product-item.jsx';
 
 import './style.css';
 
@@ -41,7 +41,10 @@ function ProductList() {
         <div id='weeklyProducts' className='overflow-x-scroll pb-8'>
           <ul className='flex gap-x-6 w-max'>
             {
-              items.map((item,i) => <ProductItem key={i} {...item} />)
+              items.map((item,i) => {
+                let { discountPercentage, ...restOfItem } = item;
+                return <ProductItem key={i} {...restOfItem} />
+              })
             }
           </ul>
         </div>
