@@ -38,7 +38,7 @@ function ProductList() {
       <p>Loading...</p>
     :
       (!error && items.length) ?
-        <div id='weeklyProducts' className='overflow-x-scroll'>
+        <div id='weeklyProducts' className='overflow-x-scroll pb-8'>
           <ul className='flex gap-x-6 w-max'>
             {
               items.map((item,i) => <ProductItem key={i} {...item} />)

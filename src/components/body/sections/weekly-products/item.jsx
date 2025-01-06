@@ -15,8 +15,11 @@ function ProductItem({ title, price, description, rating, reviews, thumbnail }) 
           </p>
         </hgroup>
         <p className='font-medium text-sm'>{ description }</p>
-        <Rating rating={rating} />
-        <button className='hover:bg-green hover:text-white px-5 py-1 border-solid border-green border-2 font-medium rounded-3xl transition'>Add to Cart</button>
+        <div className='flex gap-x-2'>
+          <Rating rating={rating} />
+          <p className='text-sm'>({ reviews.length })</p>
+        </div>
+        <button className='hover:bg-green hover:text-white px-5 py-2 border-solid border-green border-[1px] font-medium rounded-3xl transition duration-500'>Add to Cart</button>
       </div>
     </li>
   );
