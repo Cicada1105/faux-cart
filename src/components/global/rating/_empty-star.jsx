@@ -1,6 +1,6 @@
 function EmptyStar(){
   return (
-    <i className="fa-regular fa-star"></i>
+    <i className="text-lime fa-regular fa-star"></i>
   );
 }
 
