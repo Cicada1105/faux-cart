@@ -6,6 +6,7 @@ import TodaysBestDeals from './sections/best-deals';
 import Brands from './sections/brands';
 import Discounts from './sections/discounts';
 import WeeklyProducts from './sections/weekly-products';
+import MostSellingProducts from './sections/most-selling';
 
 function Body() {
   const PageSettings = useContext(PageSettingsContext);
@@ -18,6 +19,7 @@ function Body() {
       <Brands />
       <Discounts />
       <WeeklyProducts />
+      <MostSellingProducts />
     </main>
   );
 }
