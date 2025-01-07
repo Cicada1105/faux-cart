@@ -2,7 +2,7 @@ import Rating from '@components/rating';
 
 function ProductItem({ title, price, discountPercentage = null, description, rating, reviews, thumbnail }) {
   return (
-    <li className='md:w-[33.333vw] inline-block rounded-xl text-left'>
+    <li className='w-[calc(100vw-4.5rem)] md:w-[33.333vw] lg:w-[25vw] xl:w-[20vw] rounded-xl text-left'>
       <div className='bg-[#f5f6f6] rounded-xl relative aspect-square'>
         <img className='hover:scale-100 hover:cursor-pointer scale-90 rounded-xl transition object-cover object-center w-full' src={ thumbnail } />
         <i className="hover:bg-[pink] hover:cursor-pointer bg-white p-2 transition rounded-full absolute right-4 top-4 fa-regular fa-heart"></i>
