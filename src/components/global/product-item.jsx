@@ -1,6 +1,7 @@
 import Rating from '@components/rating';
 
 function ProductItem({ title, price, discountPercentage = null, description, rating, reviews, thumbnail }) {
+  let [ priceDollors, priceDecimal ] = price.toString().split('.');
   return (
     <li className='w-[calc(100vw-4.5rem)] md:w-[33.333vw] lg:w-[25vw] xl:w-[20vw] rounded-xl text-left'>
       <div className='bg-[#f5f6f6] rounded-xl relative aspect-square'>
@@ -11,7 +12,7 @@ function ProductItem({ title, price, discountPercentage = null, description, rat
         <hgroup className='flex justify-between w-full font-bold'>
           <h3>{ title }</h3>
           <p>
-            <sup>$</sup>{ price }<sup>.00</sup>
+            <sup>$</sup>{ priceDollors }<sup>.{ priceDecimal }</sup>
           </p>
         </hgroup>
         {
