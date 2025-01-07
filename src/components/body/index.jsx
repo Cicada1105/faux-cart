@@ -2,6 +2,7 @@ import { useContext } from 'react';
 
 import { PageSettingsContext } from '../../context';
 
+import Categories from './sections/categories';
 import TodaysBestDeals from './sections/best-deals';
 import Brands from './sections/brands';
 import Discounts from './sections/discounts';
@@ -15,6 +16,7 @@ function Body() {
     <main className='grow px-6'>
       <p>Language: { PageSettings.language }</p>
       <p>Location: { PageSettings.location }</p>
+      <Categories />
       <TodaysBestDeals />
       <Brands />
       <Discounts />
