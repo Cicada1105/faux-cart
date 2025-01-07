@@ -22,7 +22,7 @@ function BrandList() {
       <p>Loading...</p>
     :
       (!error && brands.length) ?
-        <ul className='grid grid-cols-2 gap-y-4 gap-x-8'>
+        <ul className='grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8'>
           {
             brands.map((brand,i) => <BrandItem key={i} {...brand} />)
           }
