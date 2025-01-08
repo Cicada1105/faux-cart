@@ -5,8 +5,8 @@ function Item({ name, details, image }) {
         <h3 className='text-2xl font-bold'>{name}</h3>
         <p className='font-medium'>{ details }</p>
       </hgroup>
-      <div className='h-60 sm:h-auto bg-black rounded-b-xl'>
-        <img className='rounded-b-xl h-full w-full object-cover object-center' src={ image } alt={ name + ' image' } />
+      <div className='h-60 overflow-hidden sm:h-auto bg-black rounded-b-xl'>
+        <img className='hover:scale-110 hover:cursor-pointer rounded-b-xl h-full w-full object-cover object-center transition' src={ image } alt={ name + ' image' } />
       </div>
     </li>
   )
