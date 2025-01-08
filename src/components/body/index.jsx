@@ -7,6 +7,7 @@ import TodaysBestDeals from './sections/best-deals';
 import Brands from './sections/brands';
 import Discounts from './sections/discounts';
 import WeeklyProducts from './sections/weekly-products';
+import ProductsFilter from './sections/products-filter';
 import MostSellingProducts from './sections/most-selling';
 import Services from './sections/services';
 
@@ -22,6 +23,7 @@ function Body() {
       <Brands />
       <Discounts />
       <WeeklyProducts />
+      <ProductsFilter />
       <MostSellingProducts />
       <Services />
     </main>
