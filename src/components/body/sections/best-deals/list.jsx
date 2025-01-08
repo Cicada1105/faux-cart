@@ -7,11 +7,12 @@ function ProductList() {
   const [loading,setLoading] = useState(true);
   const [error,setError] = useState(false);
 
+  const TOTAL_PRODUCTS = 5;
+
   useEffect(() => {
     fetch('https://dummyjson.com/products').then(result =>
       result.json()
     ).then(result => {
-      const TOTAL_PRODUCTS = 5;
       let currentProducts = result.products;
       
       // Order products from biggest discount to least
@@ -35,8 +36,8 @@ function ProductList() {
       <p>Loading...</p>
     :
       (!error && items.length) ?
-        <div className='hor-scrollbar overflow-x-scroll pb-8'>
-          <ul className='flex gap-x-6 w-max'>
+        <div className='pb-8 hor-scrollbar overflow-x-scroll xl:overflow-auto'>
+          <ul className={`grid grid-cols-1 sm:grid-cols-${TOTAL_PRODUCTS} sm:w-[200%] md:w-[140%] lg:w-[110%] xl:w-full gap-x-6 gap-y-4`}>
             {
               items.map((item,i) => <ProductItem key={i} {...item} />)
             }
