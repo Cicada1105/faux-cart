@@ -14,7 +14,7 @@ function DiscountItem({ discount, description, image, color }) {
         </h3>
         <p className='font-medium text-base'>{ description }</p>
       </div>
-      <div className='h-[200px] overflow-hidden'>
+      <div className='h-[200px] rounded-b-xl overflow-hidden'>
         <img className='h-full w-full object-cover object-center' src={ image.url } style={{ aspectRatio: image.aspectRatio}} height='auto'/>
       </div>
     </li>
