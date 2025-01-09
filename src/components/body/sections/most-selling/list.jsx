@@ -8,7 +8,6 @@ function ProductList() {
   const [error,setError] = useState(false);
 
   const TOTAL_PRODUCTS = 5;
-  const LIST_CLASSES = `grid grid-cols-1 sm:grid-cols-${TOTAL_PRODUCTS} sm:w-[200%] md:w-[140%] lg:w-[110%] xl:w-full gap-x-6 gap-y-4`;
   
   useEffect(() => {
     fetch('https://dummyjson.com/products').then(result =>
@@ -44,7 +43,7 @@ function ProductList() {
     :
       (!error && items.length) ?
         <div className='pb-8 hor-scrollbar overflow-x-scroll xl:overflow-auto'>
-          <ul className={LIST_CLASSES}>
+          <ul className='grid grid-cols-1 sm:grid-cols-5 sm:w-[200%] md:w-[140%] lg:w-[110%] xl:w-full gap-x-6 gap-y-4'>
             {
               items.map((item,i) => {
                 let { discountPercentage, ...restOfItem } = item;
