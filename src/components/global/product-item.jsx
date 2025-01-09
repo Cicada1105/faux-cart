@@ -24,7 +24,7 @@ function ProductItem({ title, price, discountPercentage = null, description, rat
           <Rating rating={rating} />
           <p className='text-sm'>({ reviews.length })</p>
         </div>
-        <button className='hover:bg-green hover:text-white px-5 py-2 border-solid border-green border-[1px] font-medium rounded-3xl transition duration-500'>Add to Cart</button>
+        <button className='btn-outline-dark'>Add to Cart</button>
       </div>
     </li>
   );

@@ -25,11 +25,6 @@ function Categories() {
     })
   },[]);
 
-  const btnClass = 'hover:cursor-pointer border-green border-[1px] px-5 py-2 border-solid rounded-3xl transition duration-500'
-
-  const inactiveBtn = 'hover:bg-green hover:text-white';
-  const activeBtn = 'bg-green text-white hover:bg-transparent hover:text-black';
-
   return (
     loading ? 
       <p>Loading...</p>
@@ -38,7 +33,7 @@ function Categories() {
         <ul className='flex flex-wrap gap-x-6 gap-y-4'>
         {
           categories.map((category, i) => 
-            <li className={ btnClass.concat(' ',category === currCategoryFilter ? activeBtn : inactiveBtn) } key={i} onClick={() => dispatch(category)}>
+            <li className={ category === currCategoryFilter ? 'btn-outline-inverse-dark' : 'btn-outline-dark' } key={i} onClick={() => dispatch(category)}>
               {category.slice(0,1).toUpperCase().concat(category.slice(1))}
             </li>
           )

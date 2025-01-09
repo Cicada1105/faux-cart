@@ -62,6 +62,58 @@ section {
     border-radius: 0;
   }
 }
+[class ^= 'btn-'] {
+  border:1px solid theme('colors.green');
+  padding: theme('spacing.2') theme('spacing.5');
+  border-radius: theme('spacing.6');
+  transition-duration: 500ms;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+.btn-outline-light {
+  border-color: theme('colors.white');
+  color: theme('colors.white');
+
+  &:hover {
+    background-color: theme('colors.black');
+    border-color: theme('colors.green');
+  }
+}
+.btn-outline-dark {
+  color: theme('colors.green');
+
+  &:hover {
+    background-color: theme('colors.green');
+    color: theme('colors.white');
+  }
+}
+.btn-outline-inverse-dark {
+  background-color: theme('colors.green');
+  color: theme('colors.white');
+
+  &:hover {
+    background-color: transparent;
+    color: theme('colors.green');
+  }
+}
+.btn-dark {
+  background-color: theme('colors.green');
+  color: theme('colors.white');
+
+  &:hover {
+    background-color: theme('colors.black');
+  }
+}
+.btn-inverse-dark {
+  background-color: theme('colors.black');
+  color: theme('colors.white');
+
+  &:hover {
+    background-color: theme('colors.green');
+  }
+}
 /*
 @media (prefers-color-scheme: dark) {
   :root {
