@@ -1,11 +1,11 @@
-import logo from '/logo.svg';
+import LightLogo from '/light-logo.svg';
 
 function GreenCard() {
   return (
     <svg style={{ transform: 'skewX(12deg)' }} viewBox='0 0 150 100' xmlns='http://www.w3.org/2000/svg' fill='none'>
       <rect width='150' height='100' rx='5' x='0' y='0' fill='#243f2e' />
       <g fill='#ffffff'>
-        <image href={ logo } x='15' y='10' width='70' />
+        <image href={ LightLogo } x='15' y='10' width='70' />
         <text x='10' y='75' fontSize='5px'>Card Holder Name</text>
         <text x='10' y='85' fontSize='8px' fontWeight='bolder'>John Doe</text>
         <text x='75' y='75' fontSize='5px'>Expiry Date</text>

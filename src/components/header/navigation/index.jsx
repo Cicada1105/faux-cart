@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import DarkLogo from '/dark-logo.svg';
 
 import Categories from './components/categories';
 import Links from './components/links';
@@ -31,7 +31,7 @@ function Navigation() {
   ]
   return (
     <div className='flex gap-x-4 items-center shadow-md px-8 py-6 font-bold text-green'>
-      <img src={ logo } alt='Shopcart Logo' className='w-32'/>
+      <img src={ DarkLogo } alt='Shopcart Logo' className='w-32'/>
       <Categories />
       <nav>
         <Links links={ LINKS } />
