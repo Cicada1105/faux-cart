@@ -20,8 +20,16 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
+main {
+  padding-left: theme('spacing.6');
+  padding-right: theme('spacing.6');
+}
 section {
   margin-bottom: 80px;
+}
+section.container-fluid {
+  margin-left: calc( -1 * theme('spacing.6') );
+  margin-right: calc( -1 * theme('spacing.6') );
 }
 .select-wrapper {
   select {

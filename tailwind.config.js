@@ -7,7 +7,10 @@ export default {
     colors: {
       ...colors,
       'green': '#003d29',
-      'lime': '#61aa2b'
+      'lime': '#61aa2b',
+      'beige': {
+        '400': '#ffe6cc'
+      }
     },
     extend: {},
   },
