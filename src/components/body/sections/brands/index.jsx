@@ -4,10 +4,8 @@ import BrandList from './list.jsx';
 
 function Brands() {
   return (
-    <section>
-      <SectionHeader>
-        Choose By Brand
-      </SectionHeader>
+    <section className='container'>
+      <SectionHeader>Choose By Brand</SectionHeader>
       <BrandList />
     </section>
   );

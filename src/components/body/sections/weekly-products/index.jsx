@@ -4,7 +4,7 @@ import ProductList from './list.jsx';
 
 function WeeklyProducts() {
   return (
-    <section>
+    <section className='container'>
       <SectionHeader>Weekly Popular Products</SectionHeader>
       <ProductList />
     </section>

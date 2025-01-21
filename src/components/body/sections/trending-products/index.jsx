@@ -4,7 +4,7 @@ import TrendingProductsList from './list.jsx';
 
 function TrendingProducts() {
   return (
-    <section>
+    <section className='container'>
       <SectionHeader>Trending Products For You</SectionHeader>
       <TrendingProductsList />
     </section>

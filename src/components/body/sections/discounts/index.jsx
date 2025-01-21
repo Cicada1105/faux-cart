@@ -4,7 +4,7 @@ import DiscountList from './list.jsx';
 
 function Discounts() {
   return (
-    <section>
+    <section className='container'>
       <SectionHeader>Get Up To 70% Off</SectionHeader>
       <DiscountList />
     </section>
