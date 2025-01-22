@@ -37,23 +37,25 @@ function ImageAndContent({
     break;
   }
 
+  // Classes that apply to the Image and Content section as a whole
   let classList = `container-fluid ${backgroundColor}`;
   classList = classList.concat( fullWidth ? '' : ' px-16' );
   classList = classList.concat( padding ? ' py-6' : '' );
-  classList = classList.concat( isDark ? ' text-white' : ' text-green' );
+  classList = classList.concat( isDark ? ' text-white' : ' text-black' );
 
-  let contentClassList = `${backgroundColor} flex-1 py-16 px-16 flex gap-y-6 items-start text-left flex-col justify-between`;
-
-  let imageContClassList = 'flex-1';
+  // Classes that apply only to the Content container
+  let contentContClassList = `${backgroundColor} flex-1 flex gap-y-6 items-start text-left flex-col justify-between`;
+  // Classes that only apply to the Image container
+  let imageContClassList = 'flex-1 justify-items-center';
 
   if ( isFluidContent ) {
     // If the image and content is full width, 
     //  no need to add additional negative margin
     if ( !fullWidth ) {
       if ( direction === 'right' )
-        contentClassList = contentClassList.concat(' mr-[-40px]');
+        contentContClassList = contentContClassList.concat(' mr-[-40px]');
       else if ( direction === 'left' )
-        contentClassList = contentClassList.concat(' ml-[-40px]')
+        contentContClassList = contentContClassList.concat(' ml-[-40px]')
     }
   }
   if ( isFluidImage ) {
@@ -69,15 +71,19 @@ function ImageAndContent({
   if ( direction === 'right' )
     imageContClassList = imageContClassList.concat(' ', 'order-first');
 
+  // Classes that only apply to the Content button
+  let buttonClassList = 'font-extrabold py-4 px-9';
+
+  buttonClassList = buttonClassList.concat(' ',isDark ? 'btn-outline-light' : 'btn-dark');
   return (
     <section className={ classList }>
-      <div className='flex'>
-        <hgroup className={ contentClassList }>
+      <div className='flex py-16 px-16'>
+        <hgroup className={ contentContClassList }>
           <h2 className='text-5xl font-extrabold'>{ title }</h2>
           <p className='text-lg font-semibold'>{ description }</p>
-          <button className={ isDark ? 'btn-outline-light' : 'btn-dark' }>{ buttonText }</button>
+          <button className={ buttonClassList }>{ buttonText }</button>
         </hgroup>
-        <div className={ imageContClassList.concat(' ','') }>
+        <div className={ imageContClassList }>
           { !isBackdrop && ImageComponent }
         </div>
       </div>

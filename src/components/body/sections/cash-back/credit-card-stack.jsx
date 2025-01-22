@@ -3,14 +3,14 @@ import RedCard from './red-card.jsx';
 import GreenCard from './green-card.jsx';
 
 function CreditCardStacks() {
-  const cardClassList = 'absolute w-full object-contain top-1/2 left-1/2';
+  const cardClassList = 'absolute h-min w-4/5 object-contain top-1/2 left-1/2';
 
   const greenCardClassList = '';
   const redCardClassList = '';
   const yellowCardClassList = '';
 
   const cardStyle = {
-    translate: '-40% -25%',
+    translate: '-40% -15%',
     transformOrigin: 'left center'
   }
 
@@ -27,7 +27,7 @@ function CreditCardStacks() {
     transform: 'rotate(-30.6deg)',
   }
   return (
-    <div className='relative w-3/5 h-full'>
+    <div className='relative w-4/5 h-full'>
       <div style={ yellowCardStyle } className={yellowCardClassList.concat(' ', cardClassList)}>
         { YellowCard() }
       </div>
