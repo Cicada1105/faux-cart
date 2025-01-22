@@ -4,7 +4,7 @@ import CategoriesList from './list.jsx';
 
 function Categories() {
   return (
-    <section className='container'>
+    <section>
       <SectionHeader>Shop Our Top Categories</SectionHeader>
       <CategoriesList />
     </section>

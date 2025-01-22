@@ -4,7 +4,7 @@ import ProductList from './list.jsx';
 
 function TodaysBestDeals() {
   return (
-    <section className='container'>
+    <section>
       <SectionHeader>Most Selling Products</SectionHeader>
       <ProductList />
     </section>

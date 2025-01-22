@@ -4,7 +4,7 @@ import ServicesList from './list.jsx';
 
 function Services() {
   return(
-    <section className='container'>
+    <section>
       <SectionHeader>Services To Help You Shop</SectionHeader>
       <ServicesList />
     </section>

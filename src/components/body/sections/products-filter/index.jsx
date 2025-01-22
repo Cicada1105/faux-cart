@@ -10,7 +10,7 @@ function ProductsFilter()  {
   const [categoryFilter, setCategoryFilter] = useState('');
 
   return (
-    <section className='container'>
+    <section>
       <SectionHeader>Todays Best Deals For You!</SectionHeader>
       <CategoryContext.Provider value={categoryFilter}>
         <CategoryDispatchContext.Provider value={setCategoryFilter}>
