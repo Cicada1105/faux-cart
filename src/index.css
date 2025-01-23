@@ -73,6 +73,7 @@ section.container-fluid {
 [class *= 'btn-'] {
   border:1px solid theme('colors.green');
   padding: theme('spacing.2') theme('spacing.5');
+  font-weight: theme('fontWeight.semibold');
   border-radius: 9999px;
   transition-duration: 500ms;
 
