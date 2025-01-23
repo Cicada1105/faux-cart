@@ -72,15 +72,15 @@ function ImageAndContent({
     imageContClassList = imageContClassList.concat(' ', 'order-first');
 
   // Classes that only apply to the Content button
-  let buttonClassList = 'font-extrabold py-4 px-9';
+  let buttonClassList = 'font-extrabold text-lg !py-4 !px-9';
 
   buttonClassList = buttonClassList.concat(' ',isDark ? 'btn-outline-light' : 'btn-dark');
   return (
     <section className={ classList }>
       <div className='flex py-16 px-16'>
         <hgroup className={ contentContClassList }>
-          <h2 className='text-5xl font-extrabold'>{ title }</h2>
-          <p className='text-lg font-semibold'>{ description }</p>
+          <h2 className='text-5xl font-bold'>{ title }</h2>
+          <p className='text-xl font-medium'>{ description }</p>
           <button className={ buttonClassList }>{ buttonText }</button>
         </hgroup>
         <div className={ imageContClassList }>
