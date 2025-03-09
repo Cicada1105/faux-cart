@@ -1,7 +1,11 @@
+import FooterTop from './top';
+import FooterBottom from './bottom';
+
 function Footer() {
   return (
     <footer>
-      Footer
+      <FooterTop />
+      <FooterBottom />
     </footer>
   )
 }

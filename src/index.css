@@ -20,7 +20,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-main {
+main, footer {
   padding-left: theme('spacing.10');
   padding-right: theme('spacing.10');
 }

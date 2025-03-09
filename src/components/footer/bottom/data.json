@@ -1,0 +1,27 @@
+[
+  {
+    "icon": "fa-solid fa-briefcase",
+    "text": "Become Seller",
+    "path": "#"
+  },
+  {
+    "icon": "fa-solid fa-gift",
+    "text": "Gift Cards",
+    "path": "#"
+  },
+  {
+    "icon": "fa-regular fa-circle-question",
+    "text": "Help Center",
+    "path": "#"
+  },
+  {
+    "icon": "fa-solid fa-clipboard-check",
+    "text": "Terms of Service",
+    "path": "#"
+  },
+  {
+    "icon": "fa-solid fa-file-shield",
+    "text": "Privacy & Policy",
+    "path": "#"
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "type": "Stripe",
+    "image_class": "fa-brands fa-stripe",
+    "color": "rgb(99,97,248)"
+  },
+  {
+    "type": "Visa",
+    "image_class": "fa-brands fa-cc-visa",
+    "color": "rgb(35,47,130)"
+  },
+  {
+    "type": "Mastercard",
+    "image_class": "fa-brands fa-cc-mastercard",
+    "color": "linear-gradient(90deg,rgb(203,0,14),rgb(227,159,37))"
+  },
+  {
+    "type": "Amazon",
+    "image_class": "fa-brands fa-cc-amazon-pay",
+    "color": "linear-gradient(to bottom,rgb(0,0,0) 59%,rgb(255,171,74) 59%)"
+  },
+  {
+    "type": "Credit Card",
+    "image_class": "fa-solid fa-credit-card",
+    "color": ""
+  },
+  {
+    "type": "Paypal",
+    "image_class": "fa-brands fa-cc-paypal",
+    "color": "linear-gradient(to right,rgb(39,50,103) 55%,rgb(43,143,195) 55%)"
+  },
+  {
+    "type": "Apple Pay",
+    "image_class": "fa-brands fa-cc-apple-pay",
+    "color": "linear-gradient(#000,#000)"
+  },
+  {
+    "type": "Google Pay",
+    "image_class": "fa-brands fa-google-pay",
+    "color": ""
+  }
+]
