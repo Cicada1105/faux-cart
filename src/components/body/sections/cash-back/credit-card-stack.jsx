@@ -1,6 +1,4 @@
-import YellowCard from './yellow-card.jsx';
-import RedCard from './red-card.jsx';
-import GreenCard from './green-card.jsx';
+import CreditCard from './credit-card.jsx';
 
 function CreditCardStacks() {
   const cardClassList = 'absolute h-min w-4/5 object-contain top-1/2 left-1/2';
@@ -29,13 +27,13 @@ function CreditCardStacks() {
   return (
     <div className='relative w-4/5 h-full'>
       <div style={ yellowCardStyle } className={yellowCardClassList.concat(' ', cardClassList)}>
-        { YellowCard() }
+        <CreditCard color='#bc8720' />
       </div>
       <div style={ redCardStyle } className={redCardClassList.concat(' ', cardClassList)}>
-        { RedCard() }
+        <CreditCard color='#940000' />
       </div>
       <div style={ greenCardStyle } className={greenCardClassList.concat(' ', cardClassList)}>
-        { GreenCard() }
+        <CreditCard color='#243f2e' />
       </div>
     </div>
   );

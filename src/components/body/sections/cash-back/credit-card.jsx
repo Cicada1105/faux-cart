@@ -1,9 +1,9 @@
 import LightLogo from '/light-logo.svg';
 
-function RedCard() {
+function CreditCard({ color }) {
   return (
     <svg style={{ transform: 'skewX(12deg)' }} viewBox='0 0 150 100' xmlns='http://www.w3.org/2000/svg' fill='none'>
-      <rect width='150' height='100' rx='5' x='0' y='0' fill='#940000' />
+      <rect width='150' height='100' rx='5' x='0' y='0' fill={ color } />
       <g fill='#ffffff'>
         <image href={ LightLogo } x='15' y='10' width='70' />
         <text x='10' y='75' fontSize='5px'>Card Holder Name</text>
@@ -17,4 +17,4 @@ function RedCard() {
   )
 }
 
-export default RedCard;
+export default CreditCard;
