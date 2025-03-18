@@ -45,9 +45,9 @@ function ImageAndContent({
   classList = classList.concat( isDark ? ' text-white' : ' text-black' );
 
   // Classes that apply only to the Content container
-  let contentContClassList = `${backgroundColor} p-[70px] flex-1 flex gap-y-6 items-start text-left flex-col justify-center`;
+  let contentContClassList = `${backgroundColor} p-[70px] w-1/2 flex gap-y-6 items-start text-left flex-col justify-center`;
   // Classes that only apply to the Image container
-  let imageContClassList = 'flex-1 justify-items-center content-center';
+  let imageContClassList = 'w-1/2 justify-items-center content-center';
 
   if ( isFluidContent ) {
     // If the image and content is full width, 
