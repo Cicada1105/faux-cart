@@ -6,7 +6,6 @@ function CashBack() {
   const data = {
     backgroundColor: 'bg-beige-400',
     fullWidth: false,
-    padding: false,
     image: {
       src: CreditCardStack
     },

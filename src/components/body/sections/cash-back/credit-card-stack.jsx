@@ -25,7 +25,7 @@ function CreditCardStacks() {
     transform: 'rotate(-30.6deg)',
   }
   return (
-    <div className='relative w-4/5 h-full'>
+    <div className='relative w-4/5 aspect-[3/2]'>
       <div style={ yellowCardStyle } className={yellowCardClassList.concat(' ', cardClassList)}>
         <CreditCard color='#bc8720' />
       </div>
