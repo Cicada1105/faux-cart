@@ -7,6 +7,7 @@ import TodaysBestDeals from './sections/best-deals';
 import Brands from './sections/brands';
 import Discounts from './sections/discounts';
 import WeeklyProducts from './sections/weekly-products';
+import CashBack200 from './sections/cash-back-200';
 import ProductsFilter from './sections/products-filter';
 import CashBack from './sections/cash-back';
 import MostSellingProducts from './sections/most-selling';
@@ -25,6 +26,7 @@ function Body() {
       <Brands />
       <Discounts />
       <WeeklyProducts />
+      <CashBack200 />
       <ProductsFilter />
       <CashBack />
       <MostSellingProducts />

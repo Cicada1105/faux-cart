@@ -7,6 +7,9 @@ export default {
     colors: {
       ...colors,
       'green': '#003d29',
+      'green-alt': {
+        '600': '#003d29'
+      },
       'lime': '#61aa2b',
       'beige': {
         '400': '#ffe6cc'

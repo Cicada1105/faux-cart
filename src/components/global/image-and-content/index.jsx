@@ -38,13 +38,14 @@ function ImageAndContent({
   }
 
   // Classes that apply to the Image and Content section as a whole
-  let classList = `container-fluid ${backgroundColor}`;
+  let classList = `container-fluid relative`;
+  classList = classList.concat( isBackdrop ? '' : ` ${backgroundColor}`);
   classList = classList.concat( fullWidth ? '' : ' px-32' );
   classList = classList.concat( padding ? ' py-[102px]' : '' );
   classList = classList.concat( isDark ? ' text-white' : ' text-black' );
 
   // Classes that apply only to the Content container
-  let contentContClassList = `${backgroundColor} flex-1 flex gap-y-6 items-start text-left flex-col justify-center`;
+  let contentContClassList = `${backgroundColor} p-[70px] flex-1 flex gap-y-6 items-start text-left flex-col justify-center`;
   // Classes that only apply to the Image container
   let imageContClassList = 'flex-1 justify-items-center content-center';
 
@@ -87,7 +88,12 @@ function ImageAndContent({
   buttonClassList = buttonClassList.concat(' ',isDark ? 'btn-outline-light' : 'btn-dark');
   return (
     <section className={ classList }>
-    {/* py-16 px-16*/}
+    {
+      isBackdrop && 
+      <div className='absolute overflow-hidden left-0 top-0 w-full h-full z-[-1]'>
+        {ImageComponent}
+      </div>
+    }
       <div className='flex'>
         <hgroup className={ contentContClassList }>
           <h2 className='text-5xl font-bold'>{ title }</h2>
@@ -95,7 +101,7 @@ function ImageAndContent({
           <button className={ buttonClassList }>{ buttonText }</button>
         </hgroup>
         <div className={ imageContClassList }>
-          { !isBackdrop && ImageComponent }
+          { isBackdrop ? '' : ImageComponent }
         </div>
       </div>
     </section>
