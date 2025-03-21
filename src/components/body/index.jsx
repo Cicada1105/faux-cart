@@ -12,6 +12,7 @@ import ProductsFilter from './sections/products-filter';
 import CashBack from './sections/cash-back';
 import MostSellingProducts from './sections/most-selling';
 import TrendingProducts from './sections/trending-products';
+import BestSellingStores from './sections/best-selling-stores';
 import Services from './sections/services';
 
 function Body() {
@@ -31,6 +32,7 @@ function Body() {
       <CashBack />
       <MostSellingProducts />
       <TrendingProducts />
+      <BestSellingStores />
       <Services />
     </main>
   );

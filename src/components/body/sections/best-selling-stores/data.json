@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Bag * Perfume",
+    "delivery": "Delivery within 24 hours",
+    "image": "https://www.dropbox.com/scl/fi/qcx45ihrtavi4gdzoluzq/staples_purse.png?rlkey=8cplxnq0ktpkptrrrcpx88re4&st=wj9cxqke&dl=1",
+    "store": {
+      "name": "Staples",
+      "image": "https://placehold.co/128/cc0101/ffffff/webp?font=noto%20%sans&text=Staples"
+    }
+  },
+  {
+    "name": "Phone",
+    "delivery": "Delivery within 24 hours",
+    "image": "https://www.dropbox.com/scl/fi/nl3e9049ct3rcvf6qtbv0/now_delivery_phone.png?rlkey=mnkjk877izqnr2tvh70hl2717&st=lxg2wm6n&dl=1",
+    "store": {
+      "image": "https://placehold.co/128/124b98/ffffff/webp?font=lato&text=Now%0ADelivery",
+      "name": "Now Delivery"
+    }
+  },
+  {
+    "name": "Cosmetics",
+    "delivery": "Delivery within 24 hours",
+    "image": "https://www.dropbox.com/scl/fi/bkva2mx19k3qpl8t6dcuh/bevmo_cosmetics.png?rlkey=2whbpdxeamwz3spxma937ifg5&st=9z7ts5nx&dl=1",
+    "store": {
+      "image": "https://placehold.co/128/ce2b2b/ffffff/webp?font=oswald&text=BevMo!",
+      "name": "Bevmo"
+    }
+  },
+  {
+    "name": "Shoes",
+    "delivery": "Delivery within 24 hours",
+    "image": "https://www.dropbox.com/scl/fi/2yziszytmeb1jbn0i6o4g/quicklly_shoes.png?rlkey=tp5acjva50uacqswbfc3lz3q7&st=5cihd7rv&dl=1",
+    "store": {
+      "image": "https://placehold.co/128/07a87a/dbfefe/webp?font=montserrat&text=Q",
+      "name": "Quicklly"
+    }
+  }
+]

@@ -1,0 +1,48 @@
+.delivery::before {
+  content: '\f02b';
+  font-size: 1rem;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  transform: rotateZ(90deg) translateX(15%);
+  margin-right: 0.5rem;
+}
+.store-item-image {
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-name: reverseRotateImage;
+}
+.store-list-item:hover .store-item-image {
+  animation-name: rotateImage;
+}
+@keyframes rotateImage {
+  0% {
+    scale: 1;
+    rotate: z 0deg;
+  }
+  50% {
+    rotate: z 2deg;
+  }
+  100% {
+    scale: 1.25;
+    rotate: z 0deg;
+  }
+}
+@keyframes reverseRotateImage {
+  0% {
+    scale: 1.25;
+    rotate: z 0deg;
+  }
+  50% {
+    rotate: z 2deg;
+  }
+  100% {
+    scale: 1;
+    rotate: z 0deg;
+  }
+}
