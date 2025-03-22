@@ -30,7 +30,7 @@ function ImageAndContent({
   let ImageComponent;
   switch( typeof src ) {
     case 'string':
-      ImageComponent = <img src={src} alt={ title + ' image' } />;
+      ImageComponent = <img className='w-full h-full object-cover' src={src} alt={ title + ' image' } />;
     break;
     case 'function':
       ImageComponent = src();
@@ -40,15 +40,19 @@ function ImageAndContent({
   // Classes that apply to the Image and Content section as a whole
   let classList = `container-fluid relative`;
   classList = classList.concat( isBackdrop ? '' : ` ${backgroundColor}`);
-  classList = classList.concat( fullWidth ? '' : ' px-32' );
-  classList = classList.concat( padding ? ' py-[102px]' : '' );
+  classList = classList.concat( fullWidth ? '' : ' px-8 md:px-12 lg:px-18' );
+  classList = classList.concat( padding ? ' py-10 md:py-14 lg:py-20' : '' );
   classList = classList.concat( isDark ? ' text-white' : ' text-black' );
 
   // Classes that apply only to the Content container
-  let contentContClassList = `${backgroundColor} p-[70px] w-1/2 flex gap-y-6 items-start text-left flex-col justify-center`;
+  let contentContClassList = `${backgroundColor} lg:p-[70px] p-9 md:w-1/2 flex gap-y-6 items-center md:items-start md:text-left flex-col justify-center`;
   // Classes that only apply to the Image container
-  let imageContClassList = 'w-1/2 justify-items-center content-center';
+  let imageContClassList = 'md:w-1/2 justify-items-center content-center';
 
+  // Only include image padding if it is not the backdrop
+  if ( !isBackdrop ) {
+    imageContClassList = imageContClassList.concat(' max-md:py-10');
+  }
   if ( isFluidContent ) {
     // If the image and content is full width, 
     //  no need to add additional negative margin
@@ -94,7 +98,7 @@ function ImageAndContent({
         {ImageComponent}
       </div>
     }
-      <div className='flex'>
+      <div className='flex flex-col md:flex-row'>
         <hgroup className={ contentContClassList }>
           <h2 className='text-5xl font-bold'>{ title }</h2>
           <p className='text-xl font-medium'>{ description }</p>
