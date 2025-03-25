@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-import ProductItem from '@components/product-item.jsx';
+import ProductItem from '@components/product-item';
 
 function ProductList() {
   const [items,setItems] = useState([]);

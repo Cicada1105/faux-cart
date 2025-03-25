@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from 'react';
 
 import { CategoryContext } from '../context.jsx';
 
-import ProductItem from '@components/product-item.jsx';
+import ProductItem from '@components/product-item';
 
 function Products() {
   const [products, setProducts] = useState([]);
