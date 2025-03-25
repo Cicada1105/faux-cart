@@ -5,7 +5,7 @@ import LanguageSelect from './components/language-select.jsx';
 
 function Banner() {
   return (
-    <div className='banner bg-green text-xs font-bold text-white px-10 py-2 flex items-center justify-between w-full'>
+    <div className='banner bg-green w-full px-10 py-2 flex flex-col md:flex-row gap-y-2 text-xs font-bold text-white items-center justify-between'>
       <div>
         <a className='tel' href="tel:+12345678900">+1(234) 567-8900</a>
       </div>
