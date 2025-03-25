@@ -55,7 +55,7 @@ function CategoriesList() {
       <p>Loading...</p>
     :
       (!error && categories.length) ?
-        <ul className='grid gap-x-6 gap-y-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-6'>
+        <ul className='grid gap-x-6 gap-y-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6'>
         {
           categories.map((category, i) => <CategoryItem key={i} {...category} />)
         }
