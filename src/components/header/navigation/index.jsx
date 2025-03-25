@@ -37,7 +37,7 @@ function Navigation() {
   return (
     <div className='relative flex gap-x-4 justify-between items-center shadow-md px-8 py-6 font-bold text-green'>
       <img src={ DarkLogo } alt='Shopcart Logo' className='w-32'/>
-      <div className={( open ? 'hidden' : 'flex' ).concat(' max-lg:flex-col max-lg:items-center max-lg:absolute max-lg:p-5 max-lg:mt-2 max-lg:w-full lg:flex gap-y-4 gap-x-4 top-full left-0 rounded-xl bg-white')}>
+      <div className={( open ? 'flex' : 'hidden' ).concat(' max-lg:flex-col max-lg:items-center max-lg:absolute max-lg:p-5 max-lg:mt-2 max-lg:w-full lg:flex gap-y-4 gap-x-4 top-full left-0 rounded-xl bg-white')}>
         <Categories />
         <nav className='flex-grow'>
           <ul className='flex max-lg:flex-col justify-around gap-y-4 gap-x-4'>
