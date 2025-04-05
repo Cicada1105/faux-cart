@@ -1,7 +1,3 @@
-import { useContext } from 'react';
-
-import { PageSettingsContext } from '../../context';
-
 import IntroContent from './sections/intro-content';
 import Categories from './sections/categories';
 import TodaysBestDeals from './sections/best-deals';
@@ -17,12 +13,8 @@ import BestSellingStores from './sections/best-selling-stores';
 import Services from './sections/services';
 
 function Body() {
-  const PageSettings = useContext(PageSettingsContext);
-
   return (
     <main className='grow'>
-      <p>Language: { PageSettings.language }</p>
-      <p>Location: { PageSettings.location }</p>
       <IntroContent />
       <Categories />
       <TodaysBestDeals />
