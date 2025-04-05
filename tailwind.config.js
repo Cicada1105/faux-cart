@@ -10,6 +10,9 @@ export default {
       'green-alt': {
         '600': '#003d29'
       },
+      'blue': {
+        '400': '#a3d2e5'
+      },
       'lime': '#61aa2b',
       'beige': {
         '400': '#ffe6cc'

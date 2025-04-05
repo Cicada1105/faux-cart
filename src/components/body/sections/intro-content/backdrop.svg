@@ -1,0 +1,15 @@
+<svg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg' fill='none'>
+  <defs>
+    <linearGradient id='fadeVertical' gradient-transform='rotate(90)'>
+      <stop offset='0%' stop-color='#9bcde3' />
+      <stop offset='100%' stop-color='#c8e8f3' />
+    </linearGradient>
+    <linearGradient id='fadeHorizontal'>
+      <stop offset='0%' stop-color='#9bcde3' />
+      <stop offset='100%' stop-color='#c8e8f3' />
+    </linearGradient>
+  </defs>
+  <polygon points="0,0 225,0 225,175 0,215" fill='url(#fadeVertical)' />
+  <polygon points="225,0 300,0 300,190 225,175" fill='url(#fadeHorizontal)' />
+  <polygon points="0,215 225,175 300,190 300,300 0,300" fill='#c8b797' />
+</svg>
