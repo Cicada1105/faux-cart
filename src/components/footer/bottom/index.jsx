@@ -31,7 +31,7 @@ function FooterBottom() {
               <a key={ i } href={ link['path'] }>
                 <li className='flex items-center gap-x-2'>
                   <i className={link['icon'].concat(' text-[#c34483] text-xl')} />
-                  <p className='w-min inline-block text-sm transition hover:text-[#ff5c4c]'>{ link['text'] }</p>
+                  <p className='inline-block text-sm transition hover:text-[#ff5c4c]'>{ link['text'] }</p>
                 </li>
               </a>
             )
