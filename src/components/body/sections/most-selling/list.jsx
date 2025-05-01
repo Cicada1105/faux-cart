@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 
 import ProductItem from '@components/product-item';
+import ScrollWrapper from '@components/scroll-wrapper';
 
 function ProductList() {
   const [items,setItems] = useState([]);
@@ -42,7 +43,7 @@ function ProductList() {
       <p>Loading...</p>
     :
       (!error && items.length) ?
-        <div className='pb-8 hor-scrollbar overflow-x-scroll xl:overflow-auto'>
+        <ScrollWrapper>
           <ul className='grid grid-cols-1 sm:grid-cols-5 sm:w-[200%] md:w-[140%] lg:w-[110%] xl:w-full gap-x-6 gap-y-4'>
             {
               items.map((item,i) => {
@@ -51,7 +52,7 @@ function ProductList() {
               })
             }
           </ul>
-        </div>
+        </ScrollWrapper>
       :
         <p>Error retrieving items.</p>
   );

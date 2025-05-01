@@ -1,14 +1,17 @@
 import Rating from '@components/rating';
 
 import style from './index.module.css';
+import mouseAnimations from './utils.js';
 
 function ProductItem({ title, price, discountPercentage = null, description, rating, reviews, thumbnail }) {
   let [ priceDollors, priceDecimal ] = price.toString().split('.');
 
+  let mouseEvents = mouseAnimations();
+
   return (
-    <li className='rounded-xl text-left flex flex-col'>
-      <div className='bg-[#f5f6f6] rounded-xl relative aspect-square'>
-        <img className='hover:scale-100 hover:cursor-pointer scale-90 rounded-xl transition object-cover object-center w-full' src={ thumbnail } />
+    <li className='rounded-xl text-left flex flex-col select-none'>
+      <div {...mouseEvents} className='bg-[#f5f6f6] rounded-xl relative aspect-square'>
+        <img className='hover:scale-100 hover:cursor-pointer pointer-events-none scale-90 rounded-xl transition object-cover object-center w-full' src={ thumbnail } />
         <i className="hover:bg-[pink] hover:cursor-pointer bg-white p-2 transition rounded-full absolute right-4 top-4 fa-regular fa-heart"></i>
       </div>
       <div className='mt-2 flex-1 flex flex-col gap-y-2 items-start'>

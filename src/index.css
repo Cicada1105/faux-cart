@@ -47,28 +47,22 @@ section.container-fluid {
     }
   }
 }
-.hor-scrollbar {
-  -moz-scrollbar-track: rgb(212,211,211);
-  scrollbar-color: rgb(39,36,35) rgb(212,211,211);
-  scrollbar-width: thin;
-  scroll-snap-type: x mandatory;
-
-  & li {
-    scroll-snap-align: start;
-  }
-  &::-webkit-scrollbar {
-    height: 5rem;
-    min-height: 5rem;
-  }
-  &::-webkit-scrollbar-track {
-    background-color: rgb(212,211,211);
-    height: 5rem;
-  }
-  &::-webkit-scrollbar-thumb {
-    background: rgb(39,36,35);
-    height: 5rem;
-    border-radius: 0;
-  }
+#cursor {
+  position: absolute;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: theme('colors.green');
+  transform: translate(-50%,-50%);
+  pointer-events: none;
+  font-size: 0px;
+  width: 0rem;
+  height: 0rem;
+  border-radius: 99999px;
+  border: 0px solid theme('colors.green');
+  transition: width 400ms, height 400ms, font-size 400ms, border 400ms;
+  z-index: 1;
 }
 [class *= 'btn-'] {
   border:1px solid theme('colors.green');
