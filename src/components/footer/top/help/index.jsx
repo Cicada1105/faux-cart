@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 import ListItem from '../list-item.jsx';
 import ListHeader from '../list-header.jsx';
@@ -7,6 +8,13 @@ function Help() {
   const [helpItems, setHelpItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
+
+  const BASE_STYLE = 'transition duration-700 delay-[400ms] text-center sm:text-left';
+  const SLIDE_UP_STYLE = ' translate-y-0';
+  const SLIDE_DOWN_STYLE = ' translate-y-1/4';
+  const { ref, inView } = useInView({
+    triggerOnce: true
+  });
 
   useEffect(() => {
     import('./data.json').then(result =>
@@ -22,7 +30,7 @@ function Help() {
   },[]);
 
   return (
-    <div className='text-center sm:text-left'>
+    <div ref={ ref } className={ BASE_STYLE.concat( inView ? SLIDE_UP_STYLE : SLIDE_DOWN_STYLE ) }>
       <ListHeader>Help</ListHeader>
       {
         loading ?

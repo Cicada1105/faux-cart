@@ -4,6 +4,7 @@
   scrollbar-width: thin;
   scroll-snap-type: x proximity;
   overflow-x: scroll;
+  overflow-y: hidden;
   
   &::-webkit-scrollbar {
     height: 5rem;

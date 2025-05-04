@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 import ProductItem from '@components/product-item';
 import ScrollWrapper from '@components/scroll-wrapper';
+import TranslateObserver from '@components/translate-observer';
 
 function ProductList() {
   const [items,setItems] = useState([]);
@@ -39,14 +40,16 @@ function ProductList() {
     :
       (!error && items.length) ?
         <ScrollWrapper>
-          <ul className='grid grid-cols-1 sm:grid-cols-5 sm:w-[200%] md:w-[140%] lg:w-[110%] xl:w-full gap-x-6 gap-y-4'>
-            {
-              items.map((item,i) => {
-                let { discountPercentage, ...restOfItem } = item;
-                return <ProductItem key={i} {...restOfItem} />
-              })
-            }
-          </ul>
+          <TranslateObserver>
+            <ul className='grid grid-cols-1 sm:grid-cols-5 sm:w-[200%] md:w-[140%] lg:w-[110%] xl:w-full gap-x-6 gap-y-4'>
+              {
+                items.map((item,i) => {
+                  let { discountPercentage, ...restOfItem } = item;
+                  return <ProductItem key={i} {...restOfItem} />
+                })
+              }
+            </ul>
+          </TranslateObserver>
         </ScrollWrapper>
       :
         <p>Error retrieving items.</p>

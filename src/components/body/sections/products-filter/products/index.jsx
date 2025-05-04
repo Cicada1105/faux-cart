@@ -3,6 +3,7 @@ import { useEffect, useState, useContext } from 'react';
 import { CategoryContext } from '../context.jsx';
 
 import ProductItem from '@components/product-item';
+import ScaleObserver from '@components/scale-observer';
 
 function Products() {
   const [products, setProducts] = useState([]);
@@ -46,7 +47,11 @@ function Products() {
           products.map((product,i) => {
             let { discountPercentage, ...restOfProduct } = product;
 
-            return <ProductItem key={i} {...restOfProduct} />
+            return (
+              <ScaleObserver key={i}>
+                <ProductItem {...restOfProduct} />
+              </ScaleObserver>
+            )
           })
         }
         </ul>

@@ -1,5 +1,7 @@
 import { useState, useEffect, useContext } from 'react';
 
+import TranslateObserver from '@components/translate-observer';
+
 import { CategoryContext, CategoryDispatchContext } from '../context.jsx';
 
 function Categories() {
@@ -30,15 +32,17 @@ function Categories() {
       <p>Loading...</p>
     :
       (!error && categories.length) ?
-        <ul className='flex flex-wrap gap-x-6 gap-y-4'>
-        {
-          categories.map((category, i) => 
-            <li className={ category === currCategoryFilter ? 'btn-outline-inverse-dark' : 'btn-outline-dark' } key={i} onClick={() => dispatch(category)}>
-              {category.slice(0,1).toUpperCase().concat(category.slice(1))}
-            </li>
-          )
-        }
-        </ul>
+        <TranslateObserver>
+          <ul className='flex flex-wrap gap-x-6 gap-y-4'>
+          {
+            categories.map((category, i) => 
+              <li className={ category === currCategoryFilter ? 'btn-outline-inverse-dark' : 'btn-outline-dark' } key={i} onClick={() => dispatch(category)}>
+                {category.slice(0,1).toUpperCase().concat(category.slice(1))}
+              </li>
+            )
+          }
+          </ul>
+        </TranslateObserver>
       :
         <p>Error retrieving categories</p>
   )
